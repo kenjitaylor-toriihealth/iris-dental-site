@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Iris Dental Medical</title>
+  <meta name="description" content="Dental health tips, clinic news, and updates from Iris Dental Medical in Sagamihara, Kanagawa." />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color: #1a2e3a; background: #fff; }
+    a { text-decoration: none; color: inherit; }
+    :root { --ib: #2a4a8a; --ir: #c0392b; --isky: #d6eaf8; --ibg: #f4f7fb; --imuted: #5a7088; --iborder: #dce8f0; }
+
+    /* Nav */
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 68px; background: #fff; border-bottom: 1px solid var(--iborder); position: sticky; top: 0; z-index: 100; }
+    .nav-logo img { height: 44px; width: auto; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: var(--imuted); }
+    .nav-links a:hover, .nav-links a.active { color: var(--ib); }
+    .nav-btn { background: var(--ib); color: #fff !important; padding: 10px 20px; border-radius: 7px; font-size: 14px; font-weight: 600; display: inline-block; }
+
+    /* Blog header */
+    .blog-hero { background: linear-gradient(120deg, #1a3470 0%, #3a5aaa 100%); padding: 60px 40px; text-align: center; color: #fff; }
+    .blog-hero h1 { font-size: 38px; font-weight: 800; margin-bottom: 10px; letter-spacing: -0.5px; }
+    .blog-hero p { font-size: 16px; opacity: 0.85; }
+
+    /* Blog grid */
+    .blog-body { max-width: 900px; margin: 60px auto; padding: 0 24px 80px; }
+    .blog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .blog-card { border: 1px solid var(--iborder); border-radius: 14px; overflow: hidden; transition: box-shadow 0.2s; }
+    .blog-card:hover { box-shadow: 0 8px 28px rgba(42,74,138,0.10); }
+    .blog-card-img { width: 100%; height: 180px; object-fit: cover; background: var(--isky); display: flex; align-items: center; justify-content: center; font-size: 40px; }
+    .blog-card-img img { width: 100%; height: 180px; object-fit: cover; }
+    .blog-card-body { padding: 20px 22px 24px; }
+    .blog-tag { font-size: 11px; font-weight: 700; color: var(--ib); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 8px; }
+    .blog-card h2 { font-size: 18px; font-weight: 700; color: #1a2e3a; margin-bottom: 8px; line-height: 1.35; }
+    .blog-card p { font-size: 14px; color: var(--imuted); line-height: 1.65; margin-bottom: 16px; }
+    .blog-meta { font-size: 12px; color: #9ab0c0; }
+    .blog-read { font-size: 13px; font-weight: 600; color: var(--ib); }
+    .blog-read:hover { text-decoration: underline; }
+
+    .empty-state { text-align: center; padding: 80px 20px; color: var(--imuted); }
+    .empty-state .icon { font-size: 48px; margin-bottom: 16px; }
+    .empty-state h2 { font-size: 22px; font-weight: 700; color: #1a2e3a; margin-bottom: 8px; }
+    .empty-state p { font-size: 15px; line-height: 1.7; }
+
+    footer { background: #0f1e2a; color: #7a9ab0; padding: 40px 40px 28px; text-align: center; }
+    footer h4 { color: #fff; font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+    footer p { font-size: 13px; line-height: 1.9; }
+    footer a { color: #5aab8e; }
+    .footer-line { width: 100%; height: 1px; background: rgba(255,255,255,0.08); margin: 18px 0; }
+    .footer-btm { font-size: 12px; color: #4a6a80; }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .blog-hero { padding: 48px 20px; }
+      .blog-hero h1 { font-size: 28px; }
+      .blog-grid { grid-template-columns: 1fr; }
+      footer { padding: 32px 20px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="Iris Dental" /></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html#id-services">Services</a></li>
+    <li><a href="index.html#id-team">Our Team</a></li>
+    <li><a href="index.html#id-hours">Hours &amp; Location</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="https://www.toriihealth.org" target="_blank">Torii Health (Medical)</a></li>
+  </ul>
+  <a class="nav-btn" href="https://irisdentalcare.reserve.ne.jp/sp/index.php?history=index.php%3Flang%3Denglish%26no_cache%3D1730109509%26json_flg%3D1%26cdgt%3Dea7c286f652cc98c4bb4e440bbdcd9c8&" target="_blank">&#x1F9B7; Book Appointment</a>
+</nav>
+
+<div class="blog-hero">
+  <h1>Dental Health &amp; Clinic News</h1>
+  <p>Tips, updates, and resources from the Iris Dental team</p>
+</div>
+
+<div class="blog-body">
+  <!-- =====================================================
+       HOW TO ADD A NEW POST:
+       1. Copy one .blog-card div below
+       2. Update the title, excerpt, date, tag, and link
+       3. Add a post image to images/ and update the src,
+          OR leave the emoji placeholder div as-is
+       4. Create the post file in posts/ using post-template.html
+       ===================================================== -->
+
+  <div class="blog-grid" id="post-grid">
+
+    <!-- SAMPLE POST — replace with real content or delete -->
+    <div class="blog-card">
+      <div class="blog-card-img">🦷</div>
+      <div class="blog-card-body">
+        <div class="blog-tag">Preventive Care</div>
+        <h2>Why Cleanings Every 6 Months Actually Matter</h2>
+        <p>Most patients skip their second cleaning of the year. Here's what's quietly building up in the meantime — and why it's worth coming in.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px;">
+          <span class="blog-meta">April 2026 &middot; Dr. Kaneshima</span>
+          <a class="blog-read" href="posts/cleanings-every-6-months.html">Read &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD MORE POSTS ABOVE THIS LINE -->
+
+  </div>
+</div>
+
+<footer>
+  <h4>Iris Dental Medical</h4>
+  <p>1-26-6 Soubudai, Minami-ku, Sagamihara-shi, Kanagawa 〒252-0324<br>
+  <a href="tel:046-244-5818">046-244-5818</a> &middot; <a href="mailto:irisdentalcaregate4@gmail.com">irisdentalcaregate4@gmail.com</a></p>
+  <div class="footer-line"></div>
+  <div class="footer-btm">&copy; 2026 Iris Dental Medical &middot; All rights reserved.</div>
+</footer>
+
+</body>
+</html>

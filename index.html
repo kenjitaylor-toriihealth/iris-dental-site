@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iris Dental Medical | Sagamihara, Kanagawa</title>
+  <meta name="description" content="English-speaking dental care for international families near Camp Zama, Gate 4, Sagamihara. General, orthodontic, surgical, and cosmetic dentistry." />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <style>
+    .id-wrap *, .id-wrap *::before, .id-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .id-wrap { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color: #1a2e3a; background: #fff; width: 100%; }
+    .id-wrap a { text-decoration: none; color: inherit; }
+    .id-wrap img { max-width: 100%; display: block; }
+    .id-wrap { --ib: #2a4a8a; --ir: #c0392b; --isky: #d6eaf8; --ibg: #f4f7fb; --imuted: #5a7088; --iborder: #dce8f0; }
+    .id-nav { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 68px; background: #fff; border-bottom: 1px solid var(--iborder); position: sticky; top: 0; z-index: 100; }
+    .id-nav-logo img { height: 44px; width: auto; }
+    .id-nav-links { display: flex; gap: 24px; list-style: none; }
+    .id-nav-links a { font-size: 14px; font-weight: 500; color: var(--imuted); }
+    .id-nav-links a:hover { color: var(--ib); }
+    .id-btn { background: var(--ib); color: #fff !important; padding: 10px 20px; border-radius: 7px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .id-btn-wh { background: #fff; color: var(--ib) !important; padding: 12px 24px; border-radius: 7px; font-size: 15px; font-weight: 700; display: inline-block; }
+    .id-btn-ghost { border: 2px solid rgba(255,255,255,0.7); color: #fff !important; padding: 12px 24px; border-radius: 7px; font-size: 15px; font-weight: 600; display: inline-block; }
+    .id-banner { background: #d6eaf8; border-bottom: 1px solid #b0cfe8; padding: 12px 40px; text-align: center; font-size: 15px; color: var(--ib); font-weight: 500; }
+    .id-banner a { color: var(--ir); font-weight: 700; text-decoration: underline; }
+    .id-hero { background: linear-gradient(120deg, #1a3470 0%, #3a5aaa 40%, #a02020 100%); padding: 80px 40px 90px; text-align: center; color: #fff; }
+    .id-hero-badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: #fff; font-size: 12px; font-weight: 600; padding: 5px 16px; border-radius: 20px; margin-bottom: 22px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .id-hero h1 { font-size: 46px; font-weight: 800; line-height: 1.15; margin-bottom: 18px; letter-spacing: -1px; max-width: 720px; margin-left: auto; margin-right: auto; }
+    .id-hero h1 em { font-style: normal; color: #aad4ff; }
+    .id-hero p { font-size: 18px; line-height: 1.7; opacity: 0.92; max-width: 580px; margin: 0 auto 36px; }
+    .id-hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .id-sec { padding: 68px 40px; }
+    .id-sec-alt { background: var(--ibg); }
+    .id-sec-hd { text-align: center; margin-bottom: 48px; }
+    .id-sec-hd h2 { font-size: 32px; font-weight: 800; color: #1a2e3a; letter-spacing: -0.4px; margin-bottom: 10px; }
+    .id-sec-hd p { font-size: 16px; color: var(--imuted); max-width: 540px; margin: 0 auto; line-height: 1.7; }
+    .id-divider { width: 44px; height: 4px; border-radius: 2px; margin: 12px auto 0; background: var(--ib); }
+    .id-grid3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; max-width: 980px; margin: 0 auto; }
+    .id-card { background: #fff; border: 1px solid var(--iborder); border-radius: 14px; padding: 28px 24px; }
+    .id-icon { width: 46px; height: 46px; border-radius: 11px; background: var(--isky); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 14px; }
+    .id-card h3 { font-size: 16px; font-weight: 700; color: #1a2e3a; margin-bottom: 8px; }
+    .id-card p { font-size: 14px; color: var(--imuted); line-height: 1.65; }
+    .id-team-row { display: flex; gap: 48px; max-width: 760px; margin: 0 auto; align-items: flex-start; }
+    .id-team-card { flex: 1; text-align: center; }
+    .id-team-photo { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; object-position: center top; margin: 0 auto 18px; border: 4px solid var(--isky); }
+    .id-team-placeholder { width: 160px; height: 160px; border-radius: 50%; background: var(--isky); margin: 0 auto 18px; display: flex; align-items: center; justify-content: center; font-size: 44px; border: 4px solid #b0cfe8; }
+    .id-team-card h3 { font-size: 19px; font-weight: 700; color: #1a2e3a; margin-bottom: 4px; }
+    .id-team-card .id-role { font-size: 12px; color: var(--ib); font-weight: 600; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.4px; }
+    .id-team-card p { font-size: 14px; color: var(--imuted); line-height: 1.65; max-width: 280px; margin: 0 auto; }
+    .id-info2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 860px; margin: 0 auto; }
+    .id-info-block h3 { font-size: 19px; font-weight: 700; color: var(--ib); margin-bottom: 18px; }
+    .id-htable { width: 100%; border-collapse: collapse; }
+    .id-htable tr { border-bottom: 1px solid var(--iborder); }
+    .id-htable td { padding: 10px 0; font-size: 15px; color: var(--imuted); }
+    .id-htable td:last-child { text-align: right; font-weight: 600; color: #1a2e3a; }
+    .id-htable .closed td { color: #bbb; }
+    .id-htable .closed td:last-child { color: var(--ir); }
+    .id-crow { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+    .id-cicon { width: 36px; height: 36px; border-radius: 9px; background: var(--isky); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+    .id-cl { font-size: 11px; color: var(--imuted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+    .id-cv { font-size: 15px; color: #1a2e3a; font-weight: 500; line-height: 1.5; }
+    .id-cv a { color: var(--ib); }
+    .id-note { background: #fef9ec; border: 1px solid #f5d68a; border-radius: 10px; padding: 16px 20px; margin-top: 24px; font-size: 14px; color: #7a5c10; line-height: 1.65; }
+    .id-torii { background: linear-gradient(135deg, #1a3470 0%, #2a5aaa 100%); border-radius: 18px; padding: 52px 40px; text-align: center; color: #fff; max-width: 760px; margin: 0 auto; }
+    .id-tbadge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); color: #aad4ff; font-size: 11px; font-weight: 700; padding: 4px 14px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .id-torii h2 { font-size: 28px; font-weight: 800; margin-bottom: 12px; }
+    .id-torii p { font-size: 15px; opacity: 0.88; line-height: 1.7; max-width: 500px; margin: 0 auto 26px; }
+    .id-torii-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .id-pills { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .id-pill { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.9); font-size: 13px; font-weight: 500; padding: 5px 13px; border-radius: 20px; }
+    .id-footer { background: #0f1e2a; color: #7a9ab0; padding: 48px 40px 32px; text-align: center; }
+    .id-footer h4 { color: #fff; font-size: 19px; font-weight: 700; margin-bottom: 8px; }
+    .id-footer-sub { font-size: 13px; line-height: 2; margin-bottom: 20px; }
+    .id-footer a { color: #5aab8e; }
+    .id-footer-line { width: 100%; height: 1px; background: rgba(255,255,255,0.08); margin: 20px 0; }
+    .id-footer-btm { font-size: 12px; color: #4a6a80; }
+    @media (max-width: 768px) {
+      .id-nav { padding: 0 20px; }
+      .id-nav-links { display: none; }
+      .id-hero { padding: 52px 20px 60px; }
+      .id-hero h1 { font-size: 30px; }
+      .id-sec { padding: 48px 20px; }
+      .id-grid3 { grid-template-columns: 1fr; }
+      .id-team-row { flex-direction: column; align-items: center; }
+      .id-info2 { grid-template-columns: 1fr; }
+      .id-banner { padding: 12px 20px; font-size: 13px; }
+      .id-footer { padding: 36px 20px 24px; }
+      .id-torii { padding: 36px 20px; border-radius: 12px; }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .id-grid3 { grid-template-columns: repeat(2,1fr); }
+    }
+  </style>
+</head>
+<body>
+<div class="id-wrap">
+<nav class="id-nav">
+  <div class="id-nav-logo"><img src="images/logo.png" alt="Iris Dental" /></div>
+  <ul class="id-nav-links">
+    <li><a href="#id-services">Services</a></li>
+    <li><a href="#id-team">Our Team</a></li>
+    <li><a href="#id-hours">Hours &amp; Location</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="https://www.toriihealth.org" target="_blank">Torii Health (Medical)</a></li>
+  </ul>
+  <a class="id-btn" href="https://irisdentalcare.reserve.ne.jp/sp/index.php?history=index.php%3Flang%3Denglish%26no_cache%3D1730109509%26json_flg%3D1%26cdgt%3Dea7c286f652cc98c4bb4e440bbdcd9c8&" target="_blank">&#x1F9B7; Book Appointment</a>
+</nav>
+<div class="id-banner">Need medical care? Iris Dental partners with <a href="https://www.toriihealth.org" target="_blank">Torii Health</a> &mdash; American family medicine for SOFA-status personnel &amp; expats in Kanagawa.</div>
+<section class="id-hero">
+  <div class="id-hero-badge">&#x1F310; English-Speaking &middot; Sagamihara, Kanagawa &middot; Gate 4</div>
+  <h1>Expert Dental Care for<br><em>International Families</em> in Japan</h1>
+  <p>General, orthodontic, surgical, and cosmetic dentistry in a fully private, multilingual environment &mdash; right outside Gate 4 in Sagamihara.</p>
+  <div class="id-hero-btns">
+    <a class="id-btn-wh" href="https://irisdentalcare.reserve.ne.jp/sp/index.php?history=index.php%3Flang%3Denglish%26no_cache%3D1730109509%26json_flg%3D1%26cdgt%3Dea7c286f652cc98c4bb4e440bbdcd9c8&" target="_blank">&#x1F9B7; Book a Dental Appointment</a>
+    <a class="id-btn-ghost" href="https://www.toriihealth.org" target="_blank">Need Medical Care? &rarr; Torii Health</a>
+  </div>
+</section>
+<section class="id-sec" id="id-services">
+  <div class="id-sec-hd"><h2>Our Services</h2><div class="id-divider"></div><p>Comprehensive dental care in a fully private setting, with three individual treatment rooms and state-of-the-art technology.</p></div>
+  <div class="id-grid3">
+    <div class="id-card"><div class="id-icon">&#x1F50D;</div><h3>General &amp; Preventive Care</h3><p>Regular cleanings, plaque and tartar removal, and personalized home-care guidance for long-term oral health.</p></div>
+    <div class="id-card"><div class="id-icon">&#x1F4D0;</div><h3>Invisalign Orthodontics</h3><p>Free consultations with 3D scanning to show exactly how your alignment improves. Easy to book anytime.</p></div>
+    <div class="id-card"><div class="id-icon">&#x2728;</div><h3>Teeth Whitening</h3><p>In-office professional whitening for a dramatically brighter smile. Deposit required &mdash; please visit us to schedule.</p></div>
+    <div class="id-card"><div class="id-icon">&#x1F5A5;&#xFE0F;</div><h3>Advanced Imaging</h3><p>CT scanning, digital X-ray, and intraoral cameras for precise diagnosis and treatment planning.</p></div>
+    <div class="id-card"><div class="id-icon">&#x2695;&#xFE0F;</div><h3>Surgical &amp; Restorative</h3><p>Full-scope surgical and restorative dentistry including extractions and implant-ready procedures.</p></div>
+    <div class="id-card"><div class="id-icon">&#x1F48E;</div><h3>Cosmetic Treatments</h3><p>Hyaluronic acid injections and tooth jewelry for patients seeking aesthetic enhancement.</p></div>
+  </div>
+  <div style="text-align:center;margin-top:36px;"><a class="id-btn" href="https://irisdentalcare.reserve.ne.jp/sp/index.php?history=index.php%3Flang%3Denglish%26no_cache%3D1730109509%26json_flg%3D1%26cdgt%3Dea7c286f652cc98c4bb4e440bbdcd9c8&" target="_blank">Book Your Appointment &rarr;</a></div>
+</section>
+<section class="id-sec id-sec-alt" id="id-team">
+  <div class="id-sec-hd"><h2>Our Team</h2><div class="id-divider"></div><p>Our multilingual staff brings warmth and global expertise to every visit.</p></div>
+  <div class="id-team-row">
+    <div class="id-team-card">
+      <img class="id-team-photo" src="images/dr-kaneshima.jpg" alt="Dr. Kaneshima" />
+      <h3>金島 亜乃少</h3>
+      <div class="id-role">Lead Dentist &amp; Practice Director</div>
+      <p>Bringing expert dental care with a warm, patient-centered approach in a fully private, international-friendly setting.</p>
+    </div>
+    <div class="id-team-card">
+      <div class="id-team-placeholder">&#x1F465;</div>
+      <h3>Our Staff</h3>
+      <div class="id-role">Multilingual Clinical Team</div>
+      <p>Our diverse team supports patients from across the world &mdash; SOFA-status families, expats, and local residents alike.</p>
+    </div>
+  </div>
+</section>
+<section class="id-sec" id="id-hours">
+  <div class="id-sec-hd"><h2>Hours &amp; Location</h2><div class="id-divider"></div></div>
+  <div class="id-info2">
+    <div class="id-info-block">
+      <h3>&#x1F4C5; Office Hours</h3>
+      <table class="id-htable">
+        <tr><td>Tuesday &ndash; Saturday</td><td>9:30 AM &ndash; 6:00 PM</td></tr>
+        <tr><td>National Holidays</td><td>9:30 AM &ndash; 5:00 PM</td></tr>
+        <tr class="closed"><td>Sunday &amp; Monday</td><td>Closed</td></tr>
+      </table>
+      <div class="id-note"><strong>&#x26A0;&#xFE0F; Teeth whitening:</strong> A deposit is required to schedule. Please visit our office in person to pay &mdash; we cannot accept phone payments.</div>
+    </div>
+    <div class="id-info-block">
+      <h3>&#x1F4CD; Find Us</h3>
+      <div class="id-crow"><div class="id-cicon">&#x1F4CD;</div><div><div class="id-cl">Address</div><div class="id-cv">1-26-6 Soubudai, Minami-ku<br>Sagamihara-shi, Kanagawa 〒252-0324<br>Ishikawa Building 1F</div></div></div>
+      <div class="id-crow"><div class="id-cicon">&#x1F4DE;</div><div><div class="id-cl">Phone</div><div class="id-cv"><a href="tel:046-244-5818">046-244-5818</a></div></div></div>
+      <div class="id-crow"><div class="id-cicon">&#x2709;&#xFE0F;</div><div><div class="id-cl">Email</div><div class="id-cv"><a href="mailto:irisdentalcaregate4@gmail.com">irisdentalcaregate4@gmail.com</a></div></div></div>
+      <div class="id-crow"><div class="id-cicon">&#x1F17F;&#xFE0F;</div><div><div class="id-cl">Parking</div><div class="id-cv">Validated. Large lot directly in front (orange sign).</div></div></div>
+      <div style="margin-top:18px;"><a class="id-btn" href="https://maps.google.com/?q=1-26-6+Soubudai+Minami-ku+Sagamihara+Kanagawa" target="_blank">Get Directions &rarr;</a></div>
+    </div>
+  </div>
+</section>
+<section class="id-sec id-sec-alt">
+  <div class="id-torii">
+    <div class="id-tbadge">In Partnership With</div>
+    <h2>Need Medical Care? Visit Torii Health.</h2>
+    <p>U.S.-trained physicians providing American family medicine, pediatrics, psychiatry, and specialist care for SOFA-status personnel and expats in Kanagawa &mdash; in person and via telehealth.</p>
+    <div class="id-torii-btns">
+      <a class="id-btn-wh" href="https://www.toriihealth.org" target="_blank">Visit Torii Health &rarr;</a>
+      <a class="id-btn-ghost" href="https://toriihealth.intakeq.com/booking" target="_blank">Book Medical Appointment</a>
+    </div>
+    <div class="id-pills">
+      <span class="id-pill">Family Medicine</span>
+      <span class="id-pill">Pediatrics</span>
+      <span class="id-pill">Psychiatry &amp; ADHD</span>
+      <span class="id-pill">Women's Health</span>
+      <span class="id-pill">Veteran Consultation</span>
+      <span class="id-pill">Telehealth</span>
+    </div>
+  </div>
+</section>
+<footer class="id-footer">
+  <h4>Iris Dental Medical</h4>
+  <div class="id-footer-sub">1-26-6 Soubudai, Minami-ku, Sagamihara-shi, Kanagawa 〒252-0324<br>Tel: <a href="tel:046-244-5818">046-244-5818</a> &nbsp;&middot;&nbsp; <a href="mailto:irisdentalcaregate4@gmail.com">irisdentalcaregate4@gmail.com</a><br>Medical appointments: <a href="https://www.toriihealth.org">Torii Health</a></div>
+  <div class="id-footer-line"></div>
+  <div class="id-footer-btm">&copy; 2026 Iris Dental Medical &middot; アイリス歯科相武台前 &middot; All rights reserved.</div>
+</footer>
+</div>
+</body>
+</html>
