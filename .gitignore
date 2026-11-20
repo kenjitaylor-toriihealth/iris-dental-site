@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Files the Claude app saves into this folder (previews, attachments)
+Claude outputs/
+
+# Analytics exports and monthly reports contain business numbers.
+# They stay on this computer (and in the claude.ai Project), not in the Git repo.
+docs/analytics/exports/*
+!docs/analytics/exports/README.md
+docs/reports/monthly/*
+!docs/reports/monthly/_template.md

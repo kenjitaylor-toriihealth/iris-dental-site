@@ -1,0 +1,7 @@
+# Netlify: keep internal files off the public website.
+# "404!" forces a 404 even though the file exists in the deploy.
+/CLAUDE.md                /404.html  404!
+/README.txt               /404.html  404!
+/docs/*                   /404.html  404!
+/tools/*                  /404.html  404!
+/posts/post-template.html /404.html  404!
