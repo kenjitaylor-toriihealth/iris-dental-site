@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /docs/
+Disallow: /tools/
+
+Sitemap: https://iris-dental-medical.com/sitemap.xml

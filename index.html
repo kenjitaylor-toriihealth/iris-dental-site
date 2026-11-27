@@ -1,196 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Iris Dental Medical | Sagamihara, Kanagawa</title>
-  <meta name="description" content="English-speaking dental care for international families near Camp Zama, Gate 4, Sagamihara. General, orthodontic, surgical, and cosmetic dentistry." />
-  <link rel="icon" type="image/png" href="images/favicon.png" />
-  <style>
-    .id-wrap *, .id-wrap *::before, .id-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    .id-wrap { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color: #1a2e3a; background: #fff; width: 100%; }
-    .id-wrap a { text-decoration: none; color: inherit; }
-    .id-wrap img { max-width: 100%; display: block; }
-    .id-wrap { --ib: #2a4a8a; --ir: #c0392b; --isky: #d6eaf8; --ibg: #f4f7fb; --imuted: #5a7088; --iborder: #dce8f0; }
-    .id-nav { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 68px; background: #fff; border-bottom: 1px solid var(--iborder); position: sticky; top: 0; z-index: 100; }
-    .id-nav-logo img { height: 44px; width: auto; }
-    .id-nav-links { display: flex; gap: 24px; list-style: none; }
-    .id-nav-links a { font-size: 14px; font-weight: 500; color: var(--imuted); }
-    .id-nav-links a:hover { color: var(--ib); }
-    .id-btn { background: var(--ib); color: #fff !important; padding: 10px 20px; border-radius: 7px; font-size: 14px; font-weight: 600; display: inline-block; }
-    .id-btn-wh { background: #fff; color: var(--ib) !important; padding: 12px 24px; border-radius: 7px; font-size: 15px; font-weight: 700; display: inline-block; }
-    .id-btn-ghost { border: 2px solid rgba(255,255,255,0.7); color: #fff !important; padding: 12px 24px; border-radius: 7px; font-size: 15px; font-weight: 600; display: inline-block; }
-    .id-banner { background: #d6eaf8; border-bottom: 1px solid #b0cfe8; padding: 12px 40px; text-align: center; font-size: 15px; color: var(--ib); font-weight: 500; }
-    .id-banner a { color: var(--ir); font-weight: 700; text-decoration: underline; }
-    .id-partner-banner { display: block; width: 100%; background: #fff; padding: 16px 24px; border-bottom: 1px solid var(--iborder); }
-    .id-partner-banner img { width: 100%; max-width: 1000px; height: auto; display: block; margin: 0 auto; border-radius: 8px; }
-    .id-hero { background: linear-gradient(120deg, #1a3470 0%, #3a5aaa 40%, #a02020 100%); padding: 80px 40px 90px; text-align: center; color: #fff; }
-    .id-hero-badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: #fff; font-size: 12px; font-weight: 600; padding: 5px 16px; border-radius: 20px; margin-bottom: 22px; letter-spacing: 0.8px; text-transform: uppercase; }
-    .id-hero h1 { font-size: 46px; font-weight: 800; line-height: 1.15; margin-bottom: 18px; letter-spacing: -1px; max-width: 720px; margin-left: auto; margin-right: auto; }
-    .id-hero h1 em { font-style: normal; color: #aad4ff; }
-    .id-hero p { font-size: 18px; line-height: 1.7; opacity: 0.92; max-width: 580px; margin: 0 auto 36px; }
-    .id-hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-    .id-sec { padding: 68px 40px; }
-    .id-sec-alt { background: var(--ibg); }
-    .id-sec-hd { text-align: center; margin-bottom: 48px; }
-    .id-sec-hd h2 { font-size: 32px; font-weight: 800; color: #1a2e3a; letter-spacing: -0.4px; margin-bottom: 10px; }
-    .id-sec-hd p { font-size: 16px; color: var(--imuted); max-width: 540px; margin: 0 auto; line-height: 1.7; }
-    .id-divider { width: 44px; height: 4px; border-radius: 2px; margin: 12px auto 0; background: var(--ib); }
-    .id-grid3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; max-width: 980px; margin: 0 auto; }
-    .id-card { background: #fff; border: 1px solid var(--iborder); border-radius: 14px; padding: 28px 24px; }
-    .id-icon { width: 46px; height: 46px; border-radius: 11px; background: var(--isky); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 14px; }
-    .id-card h3 { font-size: 16px; font-weight: 700; color: #1a2e3a; margin-bottom: 8px; }
-    .id-card p { font-size: 14px; color: var(--imuted); line-height: 1.65; }
-    .id-team-row { display: flex; gap: 48px; max-width: 760px; margin: 0 auto; align-items: flex-start; }
-    .id-team-card { flex: 1; text-align: center; }
-    .id-team-photo { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; object-position: center top; margin: 0 auto 18px; border: 4px solid var(--isky); }
-    .id-team-placeholder { width: 160px; height: 160px; border-radius: 50%; background: var(--isky); margin: 0 auto 18px; display: flex; align-items: center; justify-content: center; font-size: 44px; border: 4px solid #b0cfe8; }
-    .id-team-card h3 { font-size: 19px; font-weight: 700; color: #1a2e3a; margin-bottom: 4px; }
-    .id-team-card .id-role { font-size: 12px; color: var(--ib); font-weight: 600; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.4px; }
-    .id-team-card p { font-size: 14px; color: var(--imuted); line-height: 1.65; max-width: 280px; margin: 0 auto; }
-    .id-info2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 860px; margin: 0 auto; }
-    .id-info-block h3 { font-size: 19px; font-weight: 700; color: var(--ib); margin-bottom: 18px; }
-    .id-htable { width: 100%; border-collapse: collapse; }
-    .id-htable tr { border-bottom: 1px solid var(--iborder); }
-    .id-htable td { padding: 10px 0; font-size: 15px; color: var(--imuted); }
-    .id-htable td:last-child { text-align: right; font-weight: 600; color: #1a2e3a; }
-    .id-htable .closed td { color: #bbb; }
-    .id-htable .closed td:last-child { color: var(--ir); }
-    .id-crow { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
-    .id-cicon { width: 36px; height: 36px; border-radius: 9px; background: var(--isky); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
-    .id-cl { font-size: 11px; color: var(--imuted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
-    .id-cv { font-size: 15px; color: #1a2e3a; font-weight: 500; line-height: 1.5; }
-    .id-cv a { color: var(--ib); }
-    .id-note { background: #fef9ec; border: 1px solid #f5d68a; border-radius: 10px; padding: 16px 20px; margin-top: 24px; font-size: 14px; color: #7a5c10; line-height: 1.65; }
-    .id-torii { background: linear-gradient(135deg, #1a3470 0%, #2a5aaa 100%); border-radius: 18px; padding: 52px 40px; text-align: center; color: #fff; max-width: 760px; margin: 0 auto; }
-    .id-tbadge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); color: #aad4ff; font-size: 11px; font-weight: 700; padding: 4px 14px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 0.8px; text-transform: uppercase; }
-    .id-torii h2 { font-size: 28px; font-weight: 800; margin-bottom: 12px; }
-    .id-torii p { font-size: 15px; opacity: 0.88; line-height: 1.7; max-width: 500px; margin: 0 auto 26px; }
-    .id-torii-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
-    .id-pills { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-    .id-pill { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.9); font-size: 13px; font-weight: 500; padding: 5px 13px; border-radius: 20px; }
-    .id-footer { background: #0f1e2a; color: #7a9ab0; padding: 48px 40px 32px; text-align: center; }
-    .id-footer h4 { color: #fff; font-size: 19px; font-weight: 700; margin-bottom: 8px; }
-    .id-footer-sub { font-size: 13px; line-height: 2; margin-bottom: 20px; }
-    .id-footer a { color: #5aab8e; }
-    .id-footer-line { width: 100%; height: 1px; background: rgba(255,255,255,0.08); margin: 20px 0; }
-    .id-footer-btm { font-size: 12px; color: #4a6a80; }
-    @media (max-width: 768px) {
-      .id-nav { padding: 0 20px; }
-      .id-nav-links { display: none; }
-      .id-hero { padding: 52px 20px 60px; }
-      .id-hero h1 { font-size: 30px; }
-      .id-sec { padding: 48px 20px; }
-      .id-grid3 { grid-template-columns: 1fr; }
-      .id-team-row { flex-direction: column; align-items: center; }
-      .id-info2 { grid-template-columns: 1fr; }
-      .id-banner { padding: 12px 20px; font-size: 13px; }
-      .id-footer { padding: 36px 20px 24px; }
-      .id-torii { padding: 36px 20px; border-radius: 12px; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TZVKB3WL');</script>
+  <!-- End Google Tag Manager -->
+  <title>English-Speaking Dentist near Camp Zama | Iris Dental Medical</title>
+  <meta name="description" content="English-speaking dentist near Camp Zama, 5 min from Sōbudai-mae Station. TRICARE, Delta Dental, MetLife and more. Free Invisalign consultation. Book online.">
+  <meta name="theme-color" content="#F8F6F2">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Iris Dental Medical">
+  <meta property="og:title" content="Iris Dental Medical — Healthcare that feels like home">
+  <meta property="og:description" content="English-speaking dentist near Camp Zama, 5 min from Sōbudai-mae Station. TRICARE, Delta Dental, MetLife and more. Free Invisalign consultation. Book online.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://iris-dental-medical.com/">
+  <meta property="og:image" content="https://iris-dental-medical.com/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://iris-dental-medical.com/">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&amp;family=Poppins:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="js/site.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Iris Dental Medical",
+    "url": "https://iris-dental-medical.com/",
+    "logo": "https://iris-dental-medical.com/images/logo-mark.png",
+    "image": "https://iris-dental-medical.com/images/og-image.jpg",
+    "alternateName": [
+      "アイリス歯科相武台前",
+      "Iris Dental Care"
+    ],
+    "description": "English-speaking dental clinic in Sagamihara, Kanagawa, a 5 minute walk from Sōbudai-mae Station and close to Camp Zama. Checkups, children's dentistry, orthodontics, implants and cosmetic care.",
+    "telephone": "+81-46-244-5818",
+    "email": "irisdentalcaregate4@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ishikawa Building 1F, 1-26-6 Sobudai, Minami-ku",
+      "addressLocality": "Sagamihara",
+      "addressRegion": "Kanagawa",
+      "postalCode": "252-0324",
+      "addressCountry": "JP"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 35.499552,
+      "longitude": 139.4063801
+    },
+    "hasMap": "https://www.google.com/maps?cid=15829821523006956640",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ],
+    "availableLanguage": [
+      "English",
+      "Japanese"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Azusa Kaneshima",
+      "jobTitle": "Lead Dentist & Practice Director"
+    },
+    "foundingDate": "2019",
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://irisdental.intakeq.com/booking"
+      }
     }
-    @media (min-width: 769px) and (max-width: 1024px) {
-      .id-grid3 { grid-template-columns: repeat(2,1fr); }
-    }
-  </style>
+  }
+  </script>
 </head>
 <body>
-<div class="id-wrap">
-<nav class="id-nav">
-  <div class="id-nav-logo"><img src="images/logo.png" alt="Iris Dental" /></div>
-  <ul class="id-nav-links">
-    <li><a href="#id-services">Services</a></li>
-    <li><a href="#id-team">Our Team</a></li>
-    <li><a href="#id-hours">Hours &amp; Location</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="https://www.toriihealth.org" target="_blank">Torii Health (Medical)</a></li>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZVKB3WL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<a class="skip-link" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><g id="iris-flower"><path d="M0 0C30-45 95-55 135-42C104-8 46 12 0 0Z" fill="#7DBFA0" transform="rotate(-8)"/><path d="M4-2C46-22 92-34 130-41" stroke="#B9E0CC" stroke-width="2" fill="none" transform="rotate(-8)"/><path d="M0 0C-30-45-95-55-135-42C-104-8-46 12 0 0Z" fill="#92CDB2" transform="rotate(34)"/><path d="M-4-2C-46-22-92-34-130-41" stroke="#C4E6D4" stroke-width="2" fill="none" transform="rotate(34)"/><circle cx="0" cy="-34" r="31" fill="#F2A3B8"/><circle cx="32.3" cy="-10.5" r="31" fill="#F2A3B8"/><circle cx="20" cy="27.5" r="31" fill="#F2A3B8"/><circle cx="-20" cy="27.5" r="31" fill="#F2A3B8"/><circle cx="-32.3" cy="-10.5" r="31" fill="#F2A3B8"/><circle r="28" fill="#F2A3B8"/><path d="M0 0L25.9-35.6M0 0L41.8 13.6M0 0L0 44M0 0L-41.8 13.6M0 0L-25.9-35.6" stroke="#E486A0" stroke-width="1.5"/><circle r="11" fill="#D9607F"/><path d="M0 0C6-20 14-38 24-54" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none"/><circle cx="24" cy="-56" r="6" fill="#F5C842"/></g></defs></svg>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Iris Dental Medical, home">
+      <img src="images/logo-mark.png" alt="" width="44" height="52">
+      <span class="brand-text"><span class="brand-name">IRIS DENTAL</span><span class="brand-sub">MEDICAL</span></span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <a class="nav-extra" href="index.html">Home</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="about.html">About us</a>
+      <a href="access.html">Access &amp; hours</a>
+      <a href="faq.html">FAQ</a>
+      <a class="nav-extra" href="tel:+81462445818">Call 046-244-5818</a>
+      <a class="nav-extra" href="https://www.toriihealth.org" target="_blank" rel="noopener">Medical care: Torii Health ↗</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+81462445818" data-cta="header"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>046-244-5818</a>
+      <a class="btn btn-primary btn-sm" href="https://irisdental.intakeq.com/booking" data-cta="header">Book appointment</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="bars" aria-hidden="true"></span>Menu</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- Hero -->
+<section class="hero" id="top">
+  <div class="deco arc arc-1" aria-hidden="true"></div>
+  <div class="deco arc arc-2" aria-hidden="true"></div>
+  <div class="deco arc arc-3" aria-hidden="true"></div>
+  <svg class="deco flower flower-hl" viewBox="-110 -100 220 200" aria-hidden="true" focusable="false"><use href="#iris-flower" transform="rotate(-20)"/></svg>
+  <svg class="deco flower flower-hr" viewBox="-110 -100 220 200" aria-hidden="true" focusable="false"><use href="#iris-flower" transform="rotate(30)"/></svg>
+  <img class="hero-logo" src="images/logo-mark.png" alt="" width="95" height="112">
+  <p class="eyebrow">Sobudai-mae, Sagamihara</p>
+  <h1>Healthcare that feels <em>like home.</em></h1>
+  <p class="lead">Gentle care, close to home.<br>Integrated dental care for local families, the Camp Zama community and international patients, in English.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="https://irisdental.intakeq.com/booking" data-cta="hero">Book online</a>
+    <a class="btn btn-light" href="faq.html">Insurance &amp; FAQ</a>
+  </div>
+  <svg class="deco wave" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 40C240 0 420 70 720 46S1200 0 1440 30V150H0Z" fill="#E8B6C6"/><path d="M0 78C260 40 520 104 820 78S1260 46 1440 70V150H0Z" fill="#EFCAD6"/><path d="M0 112C300 86 600 136 900 112S1300 96 1440 108V150H0Z" fill="#F8F6F2"/></svg>
+</section>
+
+<!-- Why -->
+<section class="container section-lg stack-40" id="why">
+  <div class="section-head">
+    <p class="eyebrow">Why Iris Dental Medical</p>
+    <h2 class="h2">The Comfort of American Healthcare, the Precision and Hospitality of Japan.</h2>
+  </div>
+  <div class="pillars">
+    <div class="pillar">
+      <h3>No language barriers</h3>
+      <p>American-style consultations, patient communication, billing and payment, so patients from abroad feel at home.</p>
+    </div>
+    <div class="pillar">
+      <h3>Medical and Dental together</h3>
+      <p>A U.S.-trained American physician and a Japanese dentist working side by side for your overall health.</p>
+    </div>
+    <div class="pillar">
+      <h3>Omotenashi in every detail</h3>
+      <p>Japanese precision, attention to detail and hospitality, with care personalized to each patient.</p>
+    </div>
+  </div>
+  <ul class="facts" aria-label="In our clinic">
+    <li class="fact"><span class="icon-arch is-pink"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7Z"/><path d="m3 7 9 5 9-5M12 12v10"/></svg></span><div><h3>Free Invisalign consultation</h3><p>Includes a 3D scan, so you can see how your alignment could improve.</p></div></li>
+    <li class="fact"><span class="icon-arch"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 6.5v11M8.5 9h7M8 12h8M8.5 15h7"/></svg></span><div><h3>CT &amp; digital X-ray</h3><p>On-site imaging for precise diagnosis and treatment planning.</p></div></li>
+    <li class="fact"><span class="icon-arch is-pink"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17"/><path d="M3 21h18"/><circle cx="14.5" cy="12" r="1"/></svg></span><div><h3>3 fully private rooms</h3><p>Every appointment takes place in its own private treatment room.</p></div></li>
   </ul>
-  <a class="id-btn" href="https://irisdental.intakeq.com/booking" target="_blank">&#x1F9B7; Book Appointment</a>
-</nav>
-<a class="id-partner-banner" href="https://www.toriihealth.org" target="_blank" aria-label="Iris Dental partners with Torii Health for comprehensive family medicine and dental care in one location"><img src="images/partnership-banner.png" alt="Iris Dental x Torii Health &mdash; Healthcare that feels like home. Comprehensive family medicine &amp; dental care in one location." /></a>
-<section class="id-hero">
-  <div class="id-hero-badge">&#x1F310; English-Speaking &middot; Sagamihara, Kanagawa &middot; Gate 4</div>
-  <h1>Expert Dental Care for<br><em>International Families</em> in Japan</h1>
-  <p>General, orthodontic, surgical, and cosmetic dentistry in a fully private, multilingual environment &mdash; right outside Gate 4 in Sagamihara.</p>
-  <div class="id-hero-btns">
-    <a class="id-btn-wh" href="https://irisdental.intakeq.com/booking" target="_blank">&#x1F9B7; Book a Dental Appointment</a>
-    <a class="id-btn-ghost" href="https://www.toriihealth.org" target="_blank">Need Medical Care? &rarr; Torii Health</a>
-  </div>
 </section>
-<section class="id-sec" id="id-services">
-  <div class="id-sec-hd"><h2>Our Services</h2><div class="id-divider"></div><p>Comprehensive dental care in a fully private setting, with three individual treatment rooms and state-of-the-art technology.</p></div>
-  <div class="id-grid3">
-    <div class="id-card"><div class="id-icon">&#x1F50D;</div><h3>General &amp; Preventive Care</h3><p>Regular cleanings, plaque and tartar removal, and personalized home-care guidance for long-term oral health.</p></div>
-    <div class="id-card"><div class="id-icon">&#x1F4D0;</div><h3>Invisalign Orthodontics</h3><p>Free consultations with 3D scanning to show exactly how your alignment improves. Easy to book anytime.</p></div>
-    <div class="id-card"><div class="id-icon">&#x2728;</div><h3>Teeth Whitening</h3><p>In-office professional whitening for a dramatically brighter smile. Deposit required &mdash; please visit us to schedule.</p></div>
-    <div class="id-card"><div class="id-icon">&#x1F5A5;&#xFE0F;</div><h3>Advanced Imaging</h3><p>CT scanning, digital X-ray, and intraoral cameras for precise diagnosis and treatment planning.</p></div>
-    <div class="id-card"><div class="id-icon">&#x2695;&#xFE0F;</div><h3>Surgical &amp; Restorative</h3><p>Full-scope surgical and restorative dentistry including extractions and implant-ready procedures.</p></div>
-    <div class="id-card"><div class="id-icon">&#x1F48E;</div><h3>Cosmetic Treatments</h3><p>Hyaluronic acid injections and tooth jewelry for patients seeking aesthetic enhancement.</p></div>
-  </div>
-  <div style="text-align:center;margin-top:36px;"><a class="id-btn" href="https://irisdental.intakeq.com/booking" target="_blank">Book Your Appointment &rarr;</a></div>
-</section>
-<section class="id-sec id-sec-alt" id="id-team">
-  <div class="id-sec-hd"><h2>Our Team</h2><div class="id-divider"></div><p>Our multilingual staff brings warmth and global expertise to every visit.</p></div>
-  <div class="id-team-row">
-    <div class="id-team-card">
-      <img class="id-team-photo" src="images/dr-kaneshima.jpg" alt="Azusa Kaneshima, DMD" />
-      <h3>Azusa Kaneshima, DMD</h3>
-      <div class="id-role">Lead Dentist &amp; Practice Director</div>
-      <p>Bringing expert dental care with a warm, patient-centered approach in a fully private, international-friendly setting.</p>
+
+<!-- Treatments -->
+<section class="container section-lg stack-40" id="treatments">
+  <div class="section-head-row">
+    <div class="section-head">
+      <p class="eyebrow">Treatments</p>
+      <h2 class="h2-lg">Care for every smile</h2>
     </div>
-    <div class="id-team-card">
-      <div class="id-team-placeholder">&#x1F465;</div>
-      <h3>Our Staff</h3>
-      <div class="id-role">Multilingual Clinical Team</div>
-      <p>Our diverse team supports patients from across the world &mdash; SOFA-status families, expats, and local residents alike.</p>
+    <a class="text-link" href="treatments.html">All treatments →</a>
+  </div>
+  <div class="t-grid">
+    <a class="t-card" href="treatments.html#checkup">
+      <span class="icon-arch"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c-2.5 0-4 2-4 4.5 0 3 1.5 4.5 2 7 .5 3 1 6.5 2.5 6.5S9.5 17 12 17s3 4 4.5 4 2-3.5 2.5-6.5c.5-2.5 2-4 2-7C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3Z"/></svg></span>
+      <span class="t-title">Checkup &amp; cleaning</span>
+      <span class="tag">No symptoms</span>
+      <span class="t-desc">A full dental checkup and professional cleaning to keep your mouth healthy.</span>
+    </a>
+    <a class="t-card" href="treatments.html#children">
+      <span class="icon-arch is-pink"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></span>
+      <span class="t-title">Children’s checkup &amp; cleaning</span>
+      <span class="tag">Ages 12 &amp; under</span>
+      <span class="t-desc">A gentle checkup and cleaning so little ones grow up comfortable at the dentist.</span>
+    </a>
+    <a class="t-card" href="treatments.html#consultation">
+      <span class="icon-arch"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span>
+      <span class="t-title">Consultation &amp; examination</span>
+      <span class="tag">Concerns or discomfort</span>
+      <span class="t-desc">Not sure what’s wrong? We examine, explain your treatment plan and fees, and can often start treatment the same day.</span>
+    </a>
+    <a class="t-card" href="treatments.html#orthodontics">
+      <span class="icon-arch is-pink"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20"/><rect x="4" y="9" width="4" height="6" rx="1"/><rect x="10" y="9" width="4" height="6" rx="1"/><rect x="16" y="9" width="4" height="6" rx="1"/></svg></span>
+      <span class="t-title">Orthodontics</span>
+      <span class="tag">Wire braces · Invisalign</span>
+      <span class="t-desc">We assess your alignment and bite, then explain options, timeline and costs. Invisalign consultations are free, with a 3D scan.</span>
+    </a>
+    <a class="t-card" href="treatments.html#implants">
+      <span class="icon-arch"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10l-1.5 4h-7Z"/><path d="M10 7v11l2 3 2-3V7"/><path d="M9.5 10.5h5M9.5 14h5"/></svg></span>
+      <span class="t-title">Dental implants</span>
+      <span class="tag">Consultation</span>
+      <span class="t-desc">Find out whether implants suit you, with the options, expected timeline and estimated costs.</span>
+    </a>
+    <a class="t-card" href="treatments.html#whitening">
+      <span class="icon-arch is-pink"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8Z"/><path d="M19 17l.6 1.6L21 19l-1.4.6L19 21l-.6-1.4L17 19l1.4-.4Z"/></svg></span>
+      <span class="t-title">Teeth whitening</span>
+      <span class="tag">Ages 16+</span>
+      <span class="t-desc">A brighter smile, best after a professional cleaning within the last six months.</span>
+    </a>
+    <a class="t-card" href="treatments.html#tooth-jewelry">
+      <span class="icon-arch"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12l4 6-10 12L2 9Z"/><path d="M2 9h20M12 21 8 9l4-6 4 6-4 12"/></svg></span>
+      <span class="t-title">Tooth jewelry</span>
+      <span class="tag">No drilling</span>
+      <span class="t-desc">A tooth gem applied or removed in a quick visit, with help choosing the gem, placement and aftercare.</span>
+    </a>
+    <a class="t-card" href="treatments.html#cosmetic-dentistry">
+      <span class="icon-arch is-pink"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/></svg></span>
+      <span class="t-title">Cosmetic dentistry</span>
+      <span class="tag">Bonding veneers · Fillers</span>
+      <span class="t-desc">Direct bonding veneers and hyaluronic acid lip and dermal fillers. Consultation first.</span>
+    </a>
+  </div>
+</section>
+
+<!-- U.S. insurance -->
+<section class="container section" id="insurance">
+  <div class="ins-card">
+    <div class="ins-head">
+      <span class="icon-arch icon-arch-lg"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+      <div>
+        <p class="eyebrow">U.S. dental insurance</p>
+        <h2>We work with your U.S. dental plan</h2>
+      </div>
+    </div>
+    <ul class="chips" aria-label="Accepted insurance plans">
+      <li class="chip">TRICARE</li>
+<li class="chip">United Concordia</li>
+<li class="chip">Cigna</li>
+<li class="chip">Blue Cross Blue Shield</li>
+<li class="chip">MetLife</li>
+<li class="chip">Delta Dental</li>
+<li class="chip">Aetna</li>
+<li class="chip">Aetna International</li>
+<li class="chip">GEHA</li>
+    </ul>
+    <p class="small-note"><strong>We bill TRICARE directly.</strong> For other plans, we complete a claim form for you to submit to your insurance provider, and any payment due is made on the day of your visit. Details for each plan are on our <a href="https://irisdental.intakeq.com/booking" data-cta="home-insurance">booking site</a>. Plan not listed? <a href="faq.html#faq-insurance">See our FAQ</a>. We don’t accept Japanese health insurance.</p>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="container section-lg" id="team">
+  <div class="team-panel">
+    <div class="deco team-ring-1" aria-hidden="true"></div>
+    <div class="deco team-ring-2" aria-hidden="true"></div>
+    <div class="team-photo">
+      <div class="arch-photo"><img src="images/dr-kaneshima-portrait.jpg" alt="Azusa Kaneshima, DDS, Lead Dentist and Practice Director" width="988" height="1096" loading="lazy"></div>
+      <svg class="deco flower " viewBox="-110 -100 220 200" aria-hidden="true" focusable="false"><use href="#iris-flower" transform="rotate(-30)"/></svg>
+    </div>
+    <div class="team-text">
+      <p class="eyebrow">Meet your dentist</p>
+      <h2 class="h2">Care shaped by both Eastern and Western medicine.</h2>
+      <div>
+        <p class="person-name">Azusa Kaneshima, DDS</p>
+        <p class="person-role">Lead Dentist &amp; Practice Director</p>
+      </div>
+      <p class="bio">Dr. Kaneshima studied English at the University of Hawaii, became a nationally licensed acupuncturist, then retrained as a dentist in her 30s while raising a family. In 2019 she founded Iris Dental Care to serve her hometown and the families of Camp Zama.</p>
+      <a class="text-link" href="about.html#dr-kaneshima">Read Dr. Kaneshima’s story →</a>
     </div>
   </div>
 </section>
-<section class="id-sec" id="id-hours">
-  <div class="id-sec-hd"><h2>Hours &amp; Location</h2><div class="id-divider"></div></div>
-  <div class="id-info2">
-    <div class="id-info-block">
-      <h3>&#x1F4C5; Office Hours</h3>
-      <table class="id-htable">
-        <tr><td>Tuesday &ndash; Saturday</td><td>9:30 AM &ndash; 6:00 PM</td></tr>
-        <tr><td>National Holidays</td><td>9:30 AM &ndash; 5:00 PM</td></tr>
-        <tr class="closed"><td>Sunday &amp; Monday</td><td>Closed</td></tr>
+
+<!-- Torii Health (medical) -->
+<section class="container section" id="medical">
+  <div class="torii-card">
+    <div class="deco ring" aria-hidden="true"></div>
+    <div class="torii-text">
+      <p class="eyebrow">Medical &amp; dental, one location</p>
+      <h2>Need a doctor too? Visit Torii Health.</h2>
+      <p>Our partner clinic’s U.S.-trained physicians provide American family medicine, pediatrics, psychiatry and specialist care for SOFA-status personnel and expats in Kanagawa, in person and via telehealth.</p>
+      <ul class="chips" aria-label="Torii Health services">
+        <li class="chip is-white">Family medicine</li>
+        <li class="chip is-white">Pediatrics</li>
+        <li class="chip is-white">Psychiatry &amp; ADHD</li>
+        <li class="chip is-white">Women’s health</li>
+        <li class="chip is-white">Veteran consultation</li>
+        <li class="chip is-white">Telehealth</li>
+      </ul>
+    </div>
+    <div class="torii-actions">
+      <a class="btn btn-primary" href="https://toriihealth.intakeq.com/booking" target="_blank" rel="noopener" data-cta="home-torii">Book a medical appointment</a>
+      <a class="text-link" href="https://www.toriihealth.org" target="_blank" rel="noopener">Visit toriihealth.org ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- Visit -->
+<section class="container section-lg visit" id="visit">
+  <div class="visit-info">
+    <p class="eyebrow">Access &amp; hours</p>
+    <h2 class="h2">We look forward to seeing you!</h2>
+    <ul class="info-list">
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Ishikawa Building 1F, 1-26-6 Sobudai,<br>Minami-ku, Sagamihara, Kanagawa 252-0324</span></li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="14" rx="3"/><path d="M4 11h16M8 21l2-4M16 21l-2-4"/><circle cx="8.5" cy="14" r=".5"/><circle cx="15.5" cy="14" r=".5"/></svg><span>5 min walk from Sōbudai-mae Station, and from the Camp Zama Walk-In Gate <span style="white-space:nowrap">(Gate 4)</span><br>Nearest parking: <span style="white-space:nowrap">D-Parking</span> Sobudai <span style="white-space:nowrap">1-chome</span> Daiichi, a <span style="white-space:nowrap">1-minute walk</span> (paid, no validation)</span></li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+81462445818" data-cta="home-visit">+81 46-244-5818</a></li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:irisdentalcaregate4@gmail.com">irisdentalcaregate4@gmail.com</a></li>
+    </ul>
+    <div class="dot-table-wrap">
+      <table class="dot-table">
+        <caption class="visually-hidden">Opening hours</caption>
+        <thead><tr><th scope="col">Hours</th><th scope="col">Mon</th><th scope="col">Tue</th><th scope="col">Wed</th><th scope="col">Thu</th><th scope="col">Fri</th><th scope="col">Sat</th><th scope="col">Sun</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">9:00–17:00</th><td class="is-closed"><span aria-hidden="true">—</span><span class="visually-hidden">Closed</span></td><td><span aria-hidden="true">●</span><span class="visually-hidden">Open</span></td><td><span aria-hidden="true">●</span><span class="visually-hidden">Open</span></td><td><span aria-hidden="true">●</span><span class="visually-hidden">Open</span></td><td><span aria-hidden="true">●</span><span class="visually-hidden">Open</span></td><td><span aria-hidden="true">●</span><span class="visually-hidden">Open</span></td><td class="is-closed"><span aria-hidden="true">—</span><span class="visually-hidden">Closed</span></td></tr>
+        </tbody>
       </table>
     </div>
-    <div class="id-info-block">
-      <h3>&#x1F4CD; Find Us</h3>
-      <div class="id-crow"><div class="id-cicon">&#x1F4CD;</div><div><div class="id-cl">Address</div><div class="id-cv">1-26-6 Soubudai, Minami-ku<br>Sagamihara-shi, Kanagawa 〒252-0324<br>Ishikawa Building 1F</div></div></div>
-      <div class="id-crow"><div class="id-cicon">&#x1F4DE;</div><div><div class="id-cl">Phone</div><div class="id-cv"><a href="tel:046-244-5818">046-244-5818</a></div></div></div>
-      <div class="id-crow"><div class="id-cicon">&#x2709;&#xFE0F;</div><div><div class="id-cl">Email</div><div class="id-cv"><a href="mailto:irisdentalcaregate4@gmail.com">irisdentalcaregate4@gmail.com</a></div></div></div>
-      <div class="id-crow"><div class="id-cicon">&#x1F17F;&#xFE0F;</div><div><div class="id-cl">Parking</div><div class="id-cv">Available, but not validated. Large lot directly in front (orange sign).</div></div></div>
-      <div style="margin-top:18px;"><a class="id-btn" href="https://maps.google.com/?q=1-26-6+Soubudai+Minami-ku+Sagamihara+Kanagawa" target="_blank">Get Directions &rarr;</a></div>
-    </div>
+    <p class="small-note">Open on some Japanese national holidays: <a href="https://irisdental.intakeq.com/booking" data-cta="home-visit">check availability</a> on our booking site. See <a href="access.html">full access details</a>.</p>
+  </div>
+  <div class="map-card">
+    <svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Map: Iris Dental Medical is a 5 minute walk from Sōbudai-mae Station. The nearest parking, D-Parking, is a 1-minute walk away"><rect width="600" height="420" fill="#E4EEF3"/><path d="M40 40h150v90H40Z M420 250h140v120H420Z" fill="#D3E9DC"/><path d="M230 300h120v80H230Z M60 220h110v60H60Z M420 60h120v80H420Z" fill="#EDF2F6"/><g stroke="#FFFFFF" stroke-linecap="round" fill="none"><path d="M0 180H600" stroke-width="22"/><path d="M300 0V420" stroke-width="16"/><path d="M0 330C160 320 260 360 600 300" stroke-width="12"/><path d="M150 0L190 420" stroke-width="10"/><path d="M470 0L430 420" stroke-width="10"/></g><path d="M0 95C180 120 380 70 600 110" stroke="#1F3D5C" stroke-width="6" fill="none"/><path d="M0 95C180 120 380 70 600 110" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="14 12" fill="none"/><rect x="200" y="84" width="72" height="26" rx="8" fill="#1F3D5C"/><text x="236" y="136" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="14" font-weight="600" fill="#1F3D5C">Sōbudai-mae Sta.</text><path d="M236 112C250 170 300 200 360 222" stroke="#E486A0" stroke-width="4" stroke-dasharray="2 9" stroke-linecap="round" fill="none"/><text x="268" y="150" font-family="Poppins, Arial, sans-serif" font-size="13" font-weight="500" fill="#2A5A82" transform="rotate(26 268 150)">5 min walk</text><g transform="translate(372 236)"><ellipse cx="0" cy="4" rx="14" ry="5" fill="#1F3D5C" opacity="0.2"/><path d="M0 0C-6-12-22-24-22-40a22 22 0 0 1 44 0C22-24 6-12 0 0Z" fill="#1F3D5C"/><circle cx="0" cy="-40" r="9" fill="#F6E3E9"/></g><rect x="300" y="252" width="168" height="44" rx="12" fill="#FFFFFF"/><text x="314" y="271" font-family="Poppins, Arial, sans-serif" font-size="14" font-weight="600" fill="#1F3D5C">Iris Dental Medical</text><text x="314" y="288" font-family="Poppins, Arial, sans-serif" font-size="12" fill="#4A6075">Ishikawa Bldg 1F</text><text x="314" y="316" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="500" fill="#2A5A82">P  D-Parking (1 min walk)</text></svg><div class="map-links"><a class="map-btn is-dark" href="https://www.google.com/maps?cid=15829821523006956640" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Open in Google Maps</a><a class="map-btn" href="https://maps.apple.com/?ll=35.499552,139.4063801&amp;q=Iris%20Dental%20Medical" target="_blank" rel="noopener">Open in Apple Maps</a></div>
   </div>
 </section>
-<section class="id-sec id-sec-alt">
-  <div class="id-torii">
-    <div class="id-tbadge">In Partnership With</div>
-    <h2>Need Medical Care? Visit Torii Health.</h2>
-    <p>U.S.-trained physicians providing American family medicine, pediatrics, psychiatry, and specialist care for SOFA-status personnel and expats in Kanagawa &mdash; in person and via telehealth.</p>
-    <div class="id-torii-btns">
-      <a class="id-btn-wh" href="https://www.toriihealth.org" target="_blank">Visit Torii Health &rarr;</a>
-      <a class="id-btn-ghost" href="https://toriihealth.intakeq.com/booking" target="_blank">Book Medical Appointment</a>
+
+<!-- Closing CTA -->
+<section class="container cta-wrap">
+  <div class="cta-panel">
+    <div class="deco cta-ring-1" aria-hidden="true"></div>
+    <div class="deco cta-ring-2" aria-hidden="true"></div>
+    <svg class="deco flower " viewBox="-110 -100 220 200" aria-hidden="true" focusable="false"><use href="#iris-flower" transform="rotate(20)"/></svg>
+    <div class="cta-copy">
+      <h2>Gentle care, close to home.</h2>
+      <p>Choose a time that suits you, we’ll confirm by email. Questions first? Read our <a href="faq.html">FAQ</a>.</p>
     </div>
-    <div class="id-pills">
-      <span class="id-pill">Family Medicine</span>
-      <span class="id-pill">Pediatrics</span>
-      <span class="id-pill">Psychiatry &amp; ADHD</span>
-      <span class="id-pill">Women's Health</span>
-      <span class="id-pill">Veteran Consultation</span>
-      <span class="id-pill">Telehealth</span>
-    </div>
+    <a class="btn btn-pink" href="https://irisdental.intakeq.com/booking" data-cta="home-cta">Find a time</a>
   </div>
 </section>
-<footer class="id-footer">
-  <h4>Iris Dental Medical</h4>
-  <div class="id-footer-sub">1-26-6 Soubudai, Minami-ku, Sagamihara-shi, Kanagawa 〒252-0324<br>Tel: <a href="tel:046-244-5818">046-244-5818</a> &nbsp;&middot;&nbsp; <a href="mailto:irisdentalcaregate4@gmail.com">irisdentalcaregate4@gmail.com</a><br>Medical appointments: <a href="https://www.toriihealth.org">Torii Health</a></div>
-  <div class="id-footer-line"></div>
-  <div class="id-footer-btm">&copy; 2026 Iris Dental Medical &middot; アイリス歯科相武台前 &middot; All rights reserved.</div>
+</main>
+
+<svg class="wave-footer" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 40C240 0 420 70 720 46S1200 0 1440 30V150H0Z" fill="#E8B6C6"/><path d="M0 78C260 40 520 104 820 78S1260 46 1440 70V150H0Z" fill="#EFCAD6"/><path d="M0 112C300 86 600 136 900 112S1300 96 1440 108V150H0Z" fill="#F6E3E9"/></svg>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="index.html" aria-label="Iris Dental Medical, home">
+        <img src="images/logo-mark.png" alt="" width="37" height="44" loading="lazy">
+        <span class="brand-text"><span class="brand-name">IRIS DENTAL</span><span class="brand-sub">MEDICAL</span></span>
+      </a>
+      <p class="footer-jp" lang="ja">アイリス歯科相武台前</p>
+      <address>Ishikawa Building 1F, 1-26-6 Sobudai,<br>Minami-ku, Sagamihara,<br>Kanagawa 252-0324</address>
+    </div>
+    <div class="footer-col">
+      <h2 class="footer-h">Hours</h2>
+      <p>Tuesday – Saturday<br>9:00 – 17:00</p>
+      <p>Closed Sunday &amp; Monday. Open on some national holidays: see the <a href="https://irisdental.intakeq.com/booking" data-cta="footer-hours">booking site</a>.</p>
+    </div>
+    <div class="footer-col">
+      <h2 class="footer-h">Contact</h2>
+      <p><a href="tel:+81462445818" data-cta="footer">+81 46-244-5818</a><br><a href="mailto:irisdentalcaregate4@gmail.com">irisdentalcaregate4@gmail.com</a></p>
+      <a class="btn btn-primary btn-sm" href="https://irisdental.intakeq.com/booking" data-cta="footer">Book appointment</a>
+    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <h2 class="footer-h">Explore</h2>
+      <ul class="footer-links">
+        <li><a href="treatments.html">Treatments</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="access.html">Access &amp; hours</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="https://www.toriihealth.org" target="_blank" rel="noopener">Torii Health (medical) ↗</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 Iris Dental Medical · <a href="privacy.html">Privacy policy</a></span>
+      <span>Medical and dental care together with <a href="https://www.toriihealth.org" target="_blank" rel="noopener">Torii Health</a></span>
+    </div>
+  </div>
 </footer>
+<div class="mobile-cta">
+  <a class="btn btn-light" href="faq.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>FAQ</a>
+  <a class="btn btn-primary" href="https://irisdental.intakeq.com/booking" data-cta="mobile-bar">Book online</a>
 </div>
 </body>
 </html>

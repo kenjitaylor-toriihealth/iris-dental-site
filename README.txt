@@ -1,59 +1,80 @@
 IRIS DENTAL MEDICAL — WEBSITE
 ==============================
 
+Design: "Style A · Feels like home" (warm, photo-led).
+Plain HTML + one shared stylesheet. No build step: edit a file, upload, done.
+
+
 FOLDER STRUCTURE
 ----------------
-iris-site/
-├── index.html          ← Main homepage
-├── blog.html           ← Blog index (list of posts)
-├── README.txt          ← This file
-├── images/             ← Put all images here
-│   ├── logo.png        ← Your logo (extract from current site or re-upload)
-│   ├── favicon.png     ← Small icon for browser tab
-│   └── dr-kaneshima.jpg  ← Dr. Kaneshima's photo
-└── posts/              ← One HTML file per blog post
-    └── post-template.html  ← COPY THIS for every new post
+iris-dental-site/
+├── index.html            ← Home
+├── treatments.html       ← Treatments
+├── about.html            ← About us & Dr. Kaneshima
+├── access.html           ← Access & hours
+├── faq.html              ← FAQ (booking, cancellations, U.S. insurance, payment, treatments, visit)
+├── privacy.html          ← Privacy policy
+├── 404.html              ← "Page not found" page (Netlify uses it automatically)
+├── sitemap.xml, robots.txt ← For Google. Add new pages to sitemap.xml
+├── _redirects            ← Netlify: hides docs/, tools/, CLAUDE.md, README.txt from the public site
+├── CLAUDE.md             ← Rules and clinic facts for Claude (read this first)
+├── README.txt            ← This file
+├── docs/                 ← Internal: analytics plan, monthly reports, backlog, photo list
+├── tools/check_site.py   ← Run before publishing: python3 tools/check_site.py
+├── css/
+│   └── site.css          ← ALL styling (colours, fonts, spacing) for every page
+├── js/
+│   └── site.js           ← Mobile menu + booking-click tracking
+├── images/
+│   ├── logo-mark.png             ← Logo mark used in header, hero and footer
+│   ├── dr-kaneshima-portrait.jpg ← Dr. Kaneshima's photo (high resolution)
+│   ├── og-image.jpg              ← Image shown when the site is shared (1200×630)
+│   ├── favicon.png               ← Browser-tab icon
+│   ├── apple-touch-icon.png      ← Icon when saved to an iPhone home screen
+│   └── (logo.png, dr-kaneshima.jpg, partnership-banner.png: old design, no longer used)
 
 
-HOW TO ADD A BLOG POST
------------------------
-1. Copy posts/post-template.html
-2. Rename it: posts/your-post-title.html
-3. Open it and find all the "CHANGE:" comments — update:
-   - <title> tag
-   - Post tag (e.g. "Preventive Care")
-   - Post title (h1)
-   - Date and author
-   - Post body content
-4. Open blog.html and add a new .blog-card block
-   (copy the sample card already there and update the fields)
-5. Upload the whole folder to Netlify
+THINGS THAT APPEAR ON SEVERAL PAGES
+-----------------------------------
+If one of these changes, search all .html files for it and update every copy:
+- Booking link:  https://irisdental.intakeq.com/booking
+- Phone:         046-244-5818  (links use tel:+81462445818)
+- Email:         irisdentalcaregate4@gmail.com
+- Hours:         "9:00–17:00" — index.html (Access & hours section),
+                 access.html (hours table), faq.html, the footer of every page,
+                 and the "openingHoursSpecification" block near the top of index.html
+- Insurance list: index.html (U.S. insurance card), faq.html
+- Full list of clinic facts: CLAUDE.md
+- Header menu and footer: same block on every page
+
+
+ANALYTICS
+---------
+Google Tag Manager (GTM-TZVKB3WL) is installed on every page (top of <head> +
+the <noscript> block right after <body>). Copy both blocks into any new page.
+js/site.js sends book_click, book_medical_click and phone_click to the dataLayer.
+Setup steps for GA4 and the monthly report routine: docs/analytics/measurement-plan.md
 
 
 HOW TO DEPLOY TO NETLIFY
--------------------------
+------------------------
 1. Go to netlify.com → sign up free
-2. Drag and drop this entire "iris-site" folder onto the Netlify dashboard
+2. Drag and drop this entire folder onto the Netlify dashboard
+   (or connect the GitHub repository so every push deploys automatically)
 3. Your site goes live instantly at a random URL (e.g. sunny-dental-123.netlify.app)
 4. Go to Domain Settings → add your custom domain
-5. To update the site: just drag and drop the folder again
+5. To update the site: drag and drop the folder again (or push to GitHub)
 
 
-IMAGES
-------
-- logo.png: The Iris Dental logo. Currently embedded as base64 in the old code.
-  Extract it by opening the old Squarespace page, right-click the logo → Save image.
-- dr-kaneshima.jpg: Same — right-click the photo on the existing site → Save image.
-- favicon.png: A small square version of your logo (32x32 or 64x64 px).
-  If you don't have one, just delete the favicon line in <head> for now.
-- Post images: Any JPG/PNG works. Put them in images/ and reference as
-  ../images/your-file.jpg from inside the posts/ folder.
+PREVIEWING LOCALLY
+------------------
+Double-click index.html to open it in a browser. Everything works offline except
+the web fonts (Lora and Poppins load from Google Fonts).
 
 
 NEED HELP?
 ----------
 Just describe what you want to Claude:
-- "Add a blog post about spring dental tips"
-- "Add an insurance section to the homepage"
+- "Add a question to the FAQ"
+- "Add an FAQ section to the treatments page"
 - "Update the hours to include Sunday"
-Claude will generate the code and you paste/replace.
