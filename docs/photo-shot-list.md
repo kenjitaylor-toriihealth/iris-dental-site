@@ -9,7 +9,7 @@
 |---|---|---|
 | `clinic-exterior.jpg` | 建物の外観と入口（看板が見えるように） | Access、Home |
 | `clinic-entrance-from-street.jpg` | 駅側から歩いてきたときに見える景色 | Access（道順） |
-| `parking-opposite.jpg` | 向かいの駐車場（オレンジの看板） | Access |
+| `parking-d-parking.jpg` | 最寄りのコインパーキング「Dパーキング 相武台1丁目第1」（医院から徒歩1分） | Access |
 | `treatment-room.jpg` | 個室の診療室（3室のうち1つ、ドアが分かるように） | Home の強み、Treatments |
 | `reception.jpg` | 受付・待合 | Home、About |
 | `ct-xray.jpg` | CT・デジタルX線の機械 | Treatments |
@@ -30,5 +30,5 @@
 
 ## ストック写真を使ってよい場面
 
-ブログ記事のイメージ（歯ブラシ、笑顔の家族など）に限り、Unsplash / Pexels など商用利用可のサイトの写真を使ってよい。
+治療内容の説明用イメージ（歯ブラシ、模型など。人物なし）に限り、Unsplash / Pexels など商用利用可のサイトの写真を使ってよい。
 その場合も、院内やスタッフに見えるような写真は避ける。

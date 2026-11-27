@@ -25,23 +25,25 @@
 |---|---|
 | 正式名 | Iris Dental Medical（アイリス歯科相武台前）。旧名 Iris Dental Care（2019年開業） |
 | 住所 | Ishikawa Building 1F, 1-26-6 Sobudai, Minami-ku, Sagamihara, Kanagawa 252-0324（〒252-0324 神奈川県相模原市南区相武台1-26-6 石川ビル1F） |
-| アクセス | Sōbudai-mae 駅から徒歩5分。Camp Zama Gate 4 の近く。向かいに有料駐車場（駐車券の割引なし） |
+| アクセス | Sōbudai-mae 駅から徒歩5分。Camp Zama Walk-In Gate（4番ゲート）から徒歩5分・300m。提携駐車場なし（駐車券のサービスもなし）。最寄りは D-Parking Sobudai 1-chome Daiichi（Dパーキング 相武台1丁目第1、相武台1-25-1、24時間、医院から約15m・徒歩1分） |
 | 診療時間 | 火〜土 9:00–17:00／日・月 休診 |
 | 祝日 | **時と場合による。「予約サイトで確認してください」と書く**（例: "Open on some Japanese national holidays — check the booking site."） |
+| 地図リンク | Google: https://www.google.com/maps?cid=15829821523006956640 ／ Apple: https://maps.apple.com/?ll=35.499552,139.4063801&q=Iris%20Dental%20Medical（Apple マップには医院の登録がないため座標で指定）。座標 35.499552, 139.4063801 |
+| 初診 | 10分ほど早めに来院。問診票は IntakeQ からオンラインで提出 |
+| 予約・支払いの規約（院内の Office Policies より） | 支払いは受診当日、予約システム（患者ポータル）からオンラインで。**TRICARE は医院が直接請求する。** それ以外の保険は、医院が請求書類（claim form）を作成し、提出は患者が行う。変更・キャンセルは24時間前まで、それ以降・無断欠席は1回 $35（米ドル表記のまま）。10分以上の遅刻は予約を取り直すことがある。TRICARE 現役軍人の家族は毎回10分前に来院。家族でも1人1アカウント。予約の変更・キャンセルは患者が IntakeQ の「Manage Appointments」から自分でできる（管理画面で許可済み）。デポジットは廃止（掲載しない）。結果の保証・返金に関する項目はサイトに載せない |
 | 予約URL | https://irisdental.intakeq.com/booking （旧 reserve.ne.jp は使わない） |
 | 電話 | 046-244-5818（リンクは `tel:+81462445818`） |
 | メール | irisdentalcaregate4@gmail.com |
 | 対応する米国保険 | TRICARE, United Concordia, Cigna, Blue Cross Blue Shield, MetLife, Delta Dental, Aetna, Aetna International, GEHA。それ以外は要相談（基本的に不可） |
 | 日本の保険 | 不可 |
 | 強み | Invisalign 相談は無料（3Dスキャン付き）／CT・デジタルX線を院内に完備／完全個室の診療室が3室／すべて英語で対応 |
-| 院長 | Azusa Kaneshima, DDS — Lead Dentist & Practice Director（DDS/DMD 表記は院長に最終確認） |
+| 院長 | Azusa Kaneshima, DDS — Lead Dentist & Practice Director（学位は DDS で確定。DMD とは書かない） |
 | 医科連携 | Torii Health（米国で研修を受けた医師。https://www.toriihealth.org ／予約 https://toriihealth.intakeq.com/booking） |
 
 ## ファイル構成
 
 ```
-index.html  treatments.html  about.html  access.html  faq.html  blog.html  privacy.html  404.html
-posts/                記事。新しい記事は posts/post-template.html をコピー
+index.html  treatments.html  about.html  access.html  faq.html  privacy.html  404.html
 css/site.css          全ページ共通のスタイル（色・フォント・部品）
 js/site.js            スマホメニュー、予約/電話クリックの計測（dataLayer）
 images/               画像。og-image.jpg は SNS シェア用（1200×630）
@@ -59,7 +61,7 @@ tools/check_site.py   公開前チェック
 1. **全ページ共通のブロック**は、1ページを直したら全ページ同じように直す:
    - `<head>` 内の Google Tag Manager（GTM-TZVKB3WL）と `<body>` 直後の noscript
    - ヘッダー（`<header class="site-header">`）、フッター（`<footer class="site-footer">`）、スマホ下部バー（`.mobile-cta`）
-   - `posts/` 内のページはパスが `../` 始まり、`404.html` は `/` 始まり
+   - `404.html` だけはパスが `/` 始まり
 2. **予約リンク**には必ず `data-cta="場所の名前"` を付ける（例: `hero`, `header`, `footer`, `mobile-bar`, `home-cta`, `faq`）。月次レポートでどのボタンが効いているかを見るため。
 3. **新しいページを作るとき**:
    - 一意の `<title>`（60字以内）と `<meta name="description">`（155字以内）
@@ -99,10 +101,11 @@ tools/check_site.py   公開前チェック
    - 同じ内容を claude.ai の Project「Website - Iris Dental Medical」にも保存する
 3. 実行した改善は `docs/changelog.md` に記録する。
 
-## 保留中（クリニックの確認待ち）
+## 保留中・方針
+
+- ブログは 2026-11-27 に削除（歯科でトピックが少ないため）。/blog などの旧URLは `_redirects` でトップへ転送
 
 - 保険・支払いページ（保険会社名はFAQとHomeに掲載済み。詳細ページは保留）
-- ブログの新規記事（現在は posts/cleanings-every-6-months.html の1本のみ）
 - 写真の追加（`docs/photo-shot-list.md`）
 - その他の改善候補: `docs/backlog.md`
 

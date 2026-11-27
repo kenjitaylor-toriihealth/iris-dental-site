@@ -12,8 +12,7 @@ iris-dental-site/
 ├── treatments.html       ← Treatments
 ├── about.html            ← About us & Dr. Kaneshima
 ├── access.html           ← Access & hours
-├── faq.html              ← FAQ (booking, U.S. insurance, treatments, visit)
-├── blog.html             ← Blog index (list of posts)
+├── faq.html              ← FAQ (booking, cancellations, U.S. insurance, payment, treatments, visit)
 ├── privacy.html          ← Privacy policy
 ├── 404.html              ← "Page not found" page (Netlify uses it automatically)
 ├── sitemap.xml, robots.txt ← For Google. Add new pages to sitemap.xml
@@ -33,8 +32,6 @@ iris-dental-site/
 │   ├── favicon.png               ← Browser-tab icon
 │   ├── apple-touch-icon.png      ← Icon when saved to an iPhone home screen
 │   └── (logo.png, dr-kaneshima.jpg, partnership-banner.png: old design, no longer used)
-└── posts/
-    └── post-template.html ← COPY THIS for every new post
 
 
 THINGS THAT APPEAR ON SEVERAL PAGES
@@ -46,24 +43,9 @@ If one of these changes, search all .html files for it and update every copy:
 - Hours:         "9:00–17:00" — index.html (Access & hours section),
                  access.html (hours table), faq.html, the footer of every page,
                  and the "openingHoursSpecification" block near the top of index.html
-- Insurance list: index.html (U.S. insurance card), faq.html, the blog post
+- Insurance list: index.html (U.S. insurance card), faq.html
 - Full list of clinic facts: CLAUDE.md
 - Header menu and footer: same block on every page
-
-
-HOW TO ADD A BLOG POST
-----------------------
-1. Copy posts/post-template.html and rename it, e.g. posts/spring-dental-tips.html
-2. Open it and search for "CHANGE:" — update:
-   - <title> and <meta name="description"> (and the og:title / og:description lines)
-   - Tag, title (h1), date and author
-   - The post text
-3. Open blog.html, copy one <article class="blog-card"> block, paste it at the top
-   of the list (newest first) and update the tag, title, excerpt, date and link.
-4. Photos: put them in images/ and reference them as ../images/your-file.jpg from
-   inside posts/, or images/your-file.jpg from blog.html.
-5. Add the new post's URL to sitemap.xml
-6. Run python3 tools/check_site.py, then upload / push the whole folder.
 
 
 ANALYTICS
@@ -93,6 +75,6 @@ the web fonts (Lora and Poppins load from Google Fonts).
 NEED HELP?
 ----------
 Just describe what you want to Claude:
-- "Add a blog post about spring dental tips"
+- "Add a question to the FAQ"
 - "Add an FAQ section to the treatments page"
 - "Update the hours to include Sunday"

@@ -427,6 +427,7 @@ svg.flower { height: auto; overflow: visible; }
 .faq-item[open] summary::after { content: "−"; background: var(--pink-50); }
 .faq-a { padding: 0 26px 24px; font-size: 16px; line-height: 1.75; color: var(--ink); }
 .faq-a a { color: var(--blue); }
+.faq-a p + p { margin-top: 10px; }
 @media (max-width: 560px) { .faq-item summary { font-size: 18px; padding: 18px 60px 18px 20px; } .faq-a { padding: 0 20px 20px; } }
 
 /* ---------- Legal / small hero ---------- */
